@@ -8,9 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body class="no-scroll">
+<body>
   
   <div class="header">
     <div class="container">
@@ -31,8 +32,12 @@
           <a class="nav__link" href="#">about me</a>
           <a class="nav__link" href="#">blog</a>
           <a class="nav__link" href="#">contact</a>
-          <a class="nav__link nav__link--btn" href="#">hire me</a>
+          <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me" data-close>hire me</a>
         </nav>
+
+        <div class="burger">
+          <img class="burger__icon" src="./images/burger.svg" alt="">
+        </div>
 
       </div>
     </div><!-- /.container -->
@@ -68,8 +73,8 @@
             </a>
           </div> <!-- /.social -->
 
-          <a class="btn" href="#">HIRE ME</a>
-          <button class="btn" type="button">SEE MY RUSUME</button>
+          <a class="btn" href="#" data-modal="#modal_hire_me" data-close>HIRE ME</a>
+          <button class="btn" type="button" data-modal="#modal_resume">SEE MY RUSUME</button>
         </div>
 
         <img class="intro__photo" src="images/photo.png" alt="photo">
@@ -82,19 +87,19 @@
     <div class="container">
 
       <div class="works__nav">
-        <a class="works__nav-link" href="#">ALL</a>
-        <a class="works__nav-link" href="#">App</a>
-        <a class="works__nav-link" href="#">Websites</a>
-        <a class="works__nav-link" href="#">Interaction</a>
+        <a class="works__nav-link" href="#" data-filter="all">ALL</a>
+        <a class="works__nav-link" href="#"  data-filter="app">App</a>
+        <a class="works__nav-link" href="#" data-filter="website">Websites</a>
+        <a class="works__nav-link" href="#" data-filter="interaction">Interaction</a>
       </div>
 
-      <div class="portfolio">
-        <div class="portfolio__col">
+      <div class="portfolio" id="portfolio">
+        <div class="portfolio__col" data-cat="app">
 
-          <div class="work">
+          <div class="work" data-modal="#modal_project_1">
             <img class="work__image" src="images/portfolio_img/portfolio_img1.jpg" alt="placeholder">
             <div class="work__content">
-              <div class="work__cat">Category</div>
+              <div class="work__cat">Category: app</div>
               <div class="work__title">
                 Project title 
                 <div class="work__date" datetime="2021-08-18 00:03">2021</div>
@@ -103,12 +108,12 @@
           </div>
 
         </div>
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="website">
 
-          <div class="work">
+          <div class="work" data-modal="#modal_project_1">
             <img class="work__image" src="images/portfolio_img/portfolio_img2.jpg" alt="placeholder">
             <div class="work__content">
-              <div class="work__cat">Category</div>
+              <div class="work__cat">Category: website</div>
               <div class="work__title">
                 Project title 
                 <div class="work__date" datetime="2021-08-18 00:03">2021</div>
@@ -117,12 +122,12 @@
           </div>
 
         </div>
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="interaction">
 
-          <div class="work">
+          <div class="work" data-modal="#modal_project_1">
             <img class="work__image" src="images/portfolio_img/portfolio_img3.jpg" alt="placeholder">
             <div class="work__content">
-              <div class="work__cat">Category</div>
+              <div class="work__cat">Category: interaction</div>
               <div class="work__title">
                 Project title 
                 <div class="work__date" datetime="2021-08-18 00:03">2021</div>
@@ -132,12 +137,12 @@
 
         </div>
 
-        <div class="portfolio__col">
+        <div class="portfolio__col" data-cat="website">
 
-          <div class="work">
+          <div class="work" data-modal="#modal_project_1">
             <img class="work__image" src="images/portfolio_img/portfolio_img4.jpeg" alt="placeholder">
             <div class="work__content">
-              <div class="work__cat">Category</div>
+              <div class="work__cat">Category: website</div>
               <div class="work__title">
                 Project title 
                 <div class="work__date" datetime="2021-08-18 00:03">2021</div>
@@ -147,12 +152,12 @@
 
         </div>
 
-         <div class="portfolio__col">
+         <div class="portfolio__col" data-cat="interaction">
 
-          <div class="work">
+          <div class="work" data-modal="#modal_project_1">
             <img class="work__image" src="images/portfolio_img/portfolio_img5.jpeg" alt="placeholder">
             <div class="work__content">
-              <div class="work__cat">Category</div>
+              <div class="work__cat">Category: interaction</div>
               <div class="work__title">
                 Project title 
                 <div class="work__date" datetime="2021-08-18 00:03">2021</div>
@@ -162,12 +167,12 @@
 
         </div>
 
-         <div class="portfolio__col">
+         <div class="portfolio__col" data-cat="app">
 
-          <div class="work">
+          <div class="work" data-modal="#modal_project_1">
             <img class="work__image" src="images/portfolio_img/portfolio_img6.jpeg" alt="placeholder">
             <div class="work__content">
-              <div class="work__cat">Category</div>
+              <div class="work__cat">Category: app</div>
               <div class="work__title">
                 Project title 
                 <div class="work__date" datetime="2021-08-18 00:03">2021</div>
@@ -204,8 +209,8 @@
             </p>
           </div>
 
-          <a class="btn" href="#">HIRE ME</a>
-          <button class="btn" type="button">SEE MY RUSUME</button>
+          <a class="btn" href="#" data-modal="#modal_hire_me" data-close>HIRE ME</a>
+          <button class="btn" type="button" data-modal="#modal_resume">SEE MY RUSUME</button>
           
         </div><!-- /.about__content -->
 
@@ -339,7 +344,7 @@
               <img src="images/dribbble-gray.svg" width="24" alt="dribbble-gray.svg">
             </a>
             <a href="#" target="_blank">
-              <img src="images/in.svg" width="21" alt="in">
+              <img src="images/linkedin-gray.svg" width="21" alt="in">
             </a>
             <a href="#" target="_blank">
               <img src="images/fb-gray.svg" width="21" alt="fb">
@@ -358,7 +363,7 @@
           <a class="fooyter__nav-link" href="#">About Me</a>
           <a class="fooyter__nav-link" href="#">Block</a>
           <a class="fooyter__nav-link" href="#">Contact</a>
-          <a class="fooyter__nav-link footer__nav-link--btn" href="#">Hire Me</a>
+          <a class="fooyter__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me" data-close>Hire Me</a>
         </nav>
       </div>
 
@@ -367,10 +372,10 @@
 
 
   <!-- Modsls -->
-  <div class="modal" style="display: none;">
+  <div class="modal" id="modal_project_1">
     <div class="modal__dialog">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" data-close>
         <img src="images/modal-close.svg" alt="modal-close">
       </button>
 
@@ -418,15 +423,15 @@
     </div> <!-- /.modal__dialog -->
   </div> <!-- /.modal -->
 
-  <div class="modal" style="display: none;">
+  <div class="modal" id="modal_resume">
     <div class="modal__dialog">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" data-close>
         <img src="images/modal-close.svg" alt="modal-close">
       </button>
 
       <div class="modal__content">
-        <h3 class="modal__tittle text-center-btn">RESUME</h3>
+        <h3 class="modal__title text-center-btn">RESUME</h3>
 
         <div class="text-center-btn">
           <a class="btn btn--thin" href="#">DOWNLOAD PDF</a>
@@ -525,11 +530,10 @@
     </div> <!-- /.modal__dialog -->
   </div> <!-- /.modal -->
 
-
-  <div class="modal" style="display: none;">
+  <div class="modal" id="modal_hire_me">
     <div class="modal__dialog modal__dialog--sm">
 
-      <button class="modal__close" type="button">
+      <button class="modal__close" type="button" data-close>
         <img src="images/modal-close.svg" alt="modal-close">
       </button>
 
@@ -570,7 +574,8 @@
     </div> <!-- /.modal__dialog -->
   </div> <!-- /.modal -->
 
-
+<!-- JS -->
+<script src="js/app.js"></script>
 
 </body>
 
