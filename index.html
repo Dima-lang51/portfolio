@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Portfolio</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,9 +34,9 @@
           <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me" data-close>hire me</a>
         </nav>
 
-        <div class="burger">
-          <img class="burger__icon" src="./images/burger.svg" alt="">
-        </div>
+        <button class="burger" type="button" id="navToggle">
+                <img class="burger__icon" src="images/burger.svg" alt="">
+        </button>
 
       </div>
     </div><!-- /.container -->
@@ -46,7 +45,7 @@
   <section class="intro">
     <div class="container">
       
-      <div class="intro__iner">
+      <div class="intro__inner">
         <div class="intro__content">
           <h2 class="intro__subtitle">Helloy I'm</h2>
           <h1 class="intro__title">William Davies</h1>
@@ -194,7 +193,7 @@
   <section class="about">
     <div class="container">
 
-      <div class="about__iner">
+      <div class="about__inner">
 
         <div class="about__photo">
           <img class="img" src="images/about_photo.png" alt="photo">
@@ -287,7 +286,7 @@
             </div>
             <div class="articles__content">
               <h4 class="articles__title">
-                <a href="">Website inspiration</a> 
+                <a href="">Website inspiration 2021</a> 
               </h4>
               <div class="articles__cat">CATEGORY</div>
               <div class="articles__text">
@@ -359,11 +358,11 @@
         </div>
 
         <nav class="footer__nav">
-          <a class="fooyter__nav-link" href="#">Work</a>
-          <a class="fooyter__nav-link" href="#">About Me</a>
-          <a class="fooyter__nav-link" href="#">Block</a>
-          <a class="fooyter__nav-link" href="#">Contact</a>
-          <a class="fooyter__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me" data-close>Hire Me</a>
+          <a class="footer__nav-link" href="#">Work</a>
+          <a class="footer__nav-link" href="#">About Me</a>
+          <a class="footer__nav-link" href="#">Block</a>
+          <a class="footer__nav-link" href="#">Contact</a>
+          <a class="footer__nav-link footer__nav-link--btn" href="#" data-modal="#modal_hire_me" data-close>Hire Me</a>
         </nav>
       </div>
 
@@ -575,6 +574,7 @@
   </div> <!-- /.modal -->
 
 <!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/app.js"></script>
 
 </body>

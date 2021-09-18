@@ -8,8 +8,9 @@
   }
 }
 
-.about__iner {
+.about__inner {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1090px;
 }
 
@@ -26,12 +27,14 @@
   position: relative;
 
   img {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     z-index: 2;
   }
 
   &::before {
     content: "";
+    display: block;
     width: 413px;
     height: 413px;
     background-color: rgb(213, 166, 245);
@@ -97,10 +100,21 @@
   color: fade(rgb(204, 88, 233), 15%);
   font-weight: 700;
   text-transform: uppercase;
+
+  @media @notebook {
+    font-size: 4rem;
+  }
+
+  @media @tablet {
+    position: static;
+  }
+
+  @media @mobile {
+    font-size: 3rem;
+  }
 }
 
 .about__text {
-  text-align: justify;
   font-size: 0.8rem;
   margin-bottom: 2rem;
   color: @gray;
