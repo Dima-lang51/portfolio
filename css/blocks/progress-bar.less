@@ -3,6 +3,10 @@
 .progress-bar__item {
   display: flex;
   align-items: center;
+
+  @media @mobile-sm {
+    display: block;
+  }
 }
 
 .progress-bar__title {
@@ -12,15 +16,27 @@
 
 .progress-bar__right {
   padding-left: 1.2rem;
+
+  @media @mobile-sm {
+    padding: 0;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
 }
 
 .progress-bar__bar {
   width: 139px;
   height: 6px;
   background-color: #EFEFEF;
+
+   @media @mobile-sm {
+     width: 100px;
+   }
 }
 
 .progress-bar__progress {
   height: 100%;
   background-color: @gray;
+
+ 
 }

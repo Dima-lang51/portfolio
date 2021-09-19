@@ -27,10 +27,19 @@
   &--left {
     text-align: right;
     padding-right: 3.2rem;
+
+    @media @mobile-sm {
+      text-align: center;
+      padding-right: 0.8rem;
+    }
   }
 
   &--right {
     padding-left: 3.2rem;
+
+    @media @mobile-sm {
+      padding-left: 0.8rem;
+    }
   }
 }
 
@@ -40,6 +49,10 @@
   color: @black;
   text-transform: uppercase;
   font-weight: 700;
+
+   @media @mobile-sm {
+     margin-bottom: 1.6rem;
+   }
 }
 
 .timeline__item {
@@ -77,4 +90,9 @@
   color: @gray;
   font-weight: 300;
   line-height: 1.5;
+
+  @media @mobile-sm {
+    font-size: 1rem;
+  }
 }
+
