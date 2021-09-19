@@ -2,18 +2,32 @@
 
 .modal-work {
   display: flex;
+
+   @media @tablet {
+     display: block;
+     width: 100%;
+   }
 }
 
 .modal-work__preview {
   width: 65%;
   position: relative;
   overflow: hidden;
+
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 .modal-work__content {
   position: relative;
   width: 35%;
   padding: 3.4rem 6.6rem 1rem 1.73rem;
+
+  @media @tablet {
+    padding: 3rem;
+    width: 100%;
+  }
 }
 
 .modal-work__header {
@@ -26,6 +40,13 @@
   left: 50%;
   z-index: 1;
   transform: translate3d(-51%, -49%, 0);
+
+  @media @tablet {
+    position: static;
+    padding: 5px;
+    transform: none;
+    width: 100%;
+  }
 }
 
 .modal-work__title {
@@ -34,6 +55,10 @@
   color: @black;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media @mobile-sm {
+    font-size: 1.6rem;
+  }
 }
 
 .modal-work__info {

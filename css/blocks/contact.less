@@ -3,11 +3,28 @@
 .contact {
   display: flex;
   background:  url("/images/photo.png") right no-repeat;
+
+  @media (max-width: 855px) {
+    background: none;
+  }
+
+   @media @mobile-sm {
+     text-align: center;
+   }
 }
 
 .contact__left {
   width: 47%;
   padding: 2rem;
+
+   @media (max-width: 855px) {
+     width: 100%;
+   }
+
+    @media @mobile-sm {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
 }
 
 .contact__info {
